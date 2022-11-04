@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web:
+    build: PHP7.4
+    ports:
+      - 8084:80
+    user:
+      "1000:1000"
+    volumes:
+      - ./project:/var/www/html
+  db:
+    image: postgres:14
+    restart: always
+    user:
+      "1000:1000"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: database_name
+    volumes:
+      - ./Postgres/data:/var/lib/postgresql/data
+      - ./Postgres/initdb.d:/docker-entrypoint-initdb.d
