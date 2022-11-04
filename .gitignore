@@ -2,4 +2,6 @@
 \#*
 
 /Postgres/data/*
+/Postgres/initdb.d/*
+!/Postgres/initdb.d/.gitkeep
 
