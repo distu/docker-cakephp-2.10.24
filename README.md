@@ -9,31 +9,27 @@ PHP 7.4 + PostgreSQL 14 + CakePHP 2.10.24 の環境を簡単に起動できる�
 0. docker および docker-compose が動作する状態にしておく
 
 1. PostgreSQL データベースのデータ保存ディレクトリを作成
-
-``` shellsession
-mkdir Postgres/data
-chmod 700 Postgres/data
-```
+    ``` shellsession
+    mkdir Postgres/data
+    chmod 700 Postgres/data
+    ```
 
 2. 各種 Docker コンテナの作成
-
-``` shellsession
-docker-compose build
-```
+    ``` shellsession
+    docker-compose build
+    ```
 
 3. 環境の起動
-
-``` shellsession
-docker-compose up
-```
+    ``` shellsession
+    docker-compose up
+    ```
 
 4. Web ブラウザでアクセス
 
-下記 URL へのアクセス
-
-``` shellsession
-http://localhost:8084/admin/
-```
+    下記 URL にアクセスしてください。
+    ``` shellsession
+    http://localhost:8084/admin/
+    ```
 
 
 ## docker-compose ファイルの修正箇所
